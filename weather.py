@@ -33,8 +33,12 @@ def get_current_weather(lat, lon, API_key):
     )
     return data
 
-if __name__ == "__main__":
-    lat, lon = get_lan_lon("Toronto", "ON", "Canada", api_key)
-    print(get_current_weather(lat, lon, api_key))
+def matin(city_name,state_name,country_name):
+    lat, lon = get_lan_lon(city_name, state_name, country_name, api_key)
+    
+    weather_data = get_current_weather(lat, lon, api_key)
+    return weather_data
+
+
 
 
